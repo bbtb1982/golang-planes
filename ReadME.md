@@ -2,8 +2,8 @@
 A simple applciationt to do somewhat intersting things to planes
 of different kinds.
 
-# run
+# Run
 `$ go run ./main.go`
 
-# test
+# Test
 `$ go test ./src/..`
