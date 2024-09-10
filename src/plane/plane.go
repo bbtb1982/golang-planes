@@ -2,7 +2,6 @@ package plane
 
 import (
 	"errors"
-	//"log/slog"
   "fmt"
 )
 
@@ -202,11 +201,12 @@ func (p *CargoPlane) RemainingCargoWeight() (int, error) {
 }
 
 func (p *CargoPlane) Status() string {
-  return fmt.Sprintf("Plane State:: Kind: CargoPlane, Altitude: %d, Speed: %d, FuelLevel: %d, CargoWeight: %d",
+  return fmt.Sprintf("Plane State:: Kind: CargoPlane, Altitude: %d, Speed: %d, FuelLevel: %d, CargoWeight: %d, RemainingWeight: %d",
   p.Altitude,
   p.Speed,
   p.FuelTank.Level,
   p.CargoBay.CurrentWeight,
+  p.CargoBay.RemainingWeight(),
 );
 }
 

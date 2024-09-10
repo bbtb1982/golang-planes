@@ -5,7 +5,6 @@ import (
   "log/slog"
   "testing"
   "strings"
-  //"github.com/davecgh/go-spew/spew"
 )
 
 func TestFuelTank(t *testing.T) {
@@ -134,7 +133,7 @@ func TestCanPrintState(t *testing.T) {
   }
   p.CargoBay.AddWeight(10)
   actual := p.Status();
-  expected := "Plane State:: Kind: CargoPlane, Altitude: 0, Speed: 0, FuelLevel: 0, CargoWeight: 10";
+  expected := "Plane State:: Kind: CargoPlane, Altitude: 0, Speed: 0, FuelLevel: 0, CargoWeight: 10, RemainingWeight: 990";
 
   if strings.Compare(actual, expected) != 0 {
     slog.Info("", "actual ", actual)
